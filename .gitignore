@@ -1,3 +1,4 @@
 node_modules
 secrets.json
-.vs-code
+.vscode/
+fetch-demo-vision-api-c5f6e85573d0.json

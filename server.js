@@ -34,6 +34,9 @@ app.post('/post.json', (req,res)=>{
     const user = req.socket.remoteAddress;
     const { username, password, imgUrl } = req.body;
     // check if img contains an animal and no explicit content
+    console.log("username:", username);
+    console.log("password:", password);
+    console.log("imgUrl:", imgUrl);
     if(!imgUrl) return res.json({msg:"you forgot to send along an img"});
     if(!username || !password || username !== un || password !== pw) return res.json({msg:"something went wrong with your credentials"})
     if (username === un && password === pw && imgUrl){
