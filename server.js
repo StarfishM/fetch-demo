@@ -15,10 +15,9 @@ const { un, pw } = process.env.NODE_ENV === "production" ? process.env : require
 app.use(express.static("./public"));
 app.use(express.json());
 
-// middleware for running stuff locally...
 app.use(function (req, res, next) {
     // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
+    res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'POST');
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
     // might at some point use a session cookie
