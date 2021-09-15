@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm server.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/StarfishM/fetch-demo#readme",
   "dependencies": {
+    "@google-cloud/vision": "^2.4.0",
     "express": "^4.17.1",
     "socket.io": "^4.2.0"
   }
