@@ -36,14 +36,14 @@ app.post('/post.json', (req,res)=>{
     console.log("username:", username);
     console.log("password:", password);
     console.log("imgUrl:", imgUrl);
-    if(!imgUrl) return res.json({msg:"you forgot to send along an img"});
+    if(!imgUrl) return res.json({msg:"🙈 you forgot to send along an img"});
     if(!username || !password || username !== un || password !== pw) return res.json({msg:"something went wrong with your credentials"})
     if (username === un && password === pw && imgUrl){
         io.emit("newImg", { imgUrl, user });
-        res.json({success:true});
+        res.json({msg:"🪄 Yeah that worked and your image was sent"});
     } else {
         // res.sendStatus(403);
-        res.json({msg:"sry but that didn't work"})
+        res.json({msg:"👎 sry but that didn't work"})
     }
 })
 server.listen(PORT, () => {
